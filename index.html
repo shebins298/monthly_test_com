@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Result Analysis</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- =====================================================
+TOP TOOLBAR
+===================================================== -->
+
+    <div class="top-toolbar">
+      <input type="file" id="fileInput" />
+
+      <button id="downloadBtn">📄 Download PDF</button>
+    </div>
+
+    <div id="report">
+      <!-- =====================================================
+PAGE 1
+===================================================== -->
+
+      <div class="page">
+        <div class="header">
+          <img
+            class="logo"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo_placeholder.svg/768px-Logo_placeholder.svg.png"
+          />
+
+          <div>
+            <h2>Panangad VHSS (Aided HSS Wing 7193)</h2>
+            <p>Commerce Batch</p>
+          </div>
+        </div>
+
+        <h2 id="dynamicTitle" class="center"></h2>
+
+        <div id="executiveSummary"></div>
+
+        <br />
+
+        <div id="subjectGradeMatrix"></div>
+
+        <br />
+
+        <div id="aplusSummary"></div>
+      </div>
+
+      <!-- =====================================================
+PAGE 2
+===================================================== -->
+
+      <div class="page">
+        <h3>📘 Subject Analysis</h3>
+
+        <div id="subjectFailure"></div>
+
+        <br />
+
+        <div id="subjectAbsence"></div>
+
+        <br />
+
+        <div id="aplusPanel"></div>
+
+        <br />
+
+        <div id="nearPassPanel"></div>
+
+        <br />
+
+        <div id="riskPanel"></div>
+      </div>
+
+      <!-- =====================================================
+PAGE 3
+===================================================== -->
+
+      <div class="page">
+        <h3>👨‍🎓 Student Analysis</h3>
+
+        <div id="rankList"></div>
+
+        <br />
+
+        <div id="absentPanel"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
